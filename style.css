@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body{
+    background: darkcyan;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  div.headingCont {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.heading{
+    height:30px;
+    width: 200px;
+    background-color: black;
+    border-radius:7px 7px 0px 0px;
+  }
+  h2.headingText{
+    padding-top: 0.2rem;
+    text-align: center;
+    color:white;
+    font-weight: bolder;
+    font-size: 1.7rem;
+  }
+  .header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  }
+  .container{
+    /*margin-top: 0vh;*/
+    height: 520px;
+    width: 340px;
+    border-radius: 10px;
+    background: black;
+    /*box-shadow: -3px -3px 4px rgba(0,0,0,.8),
+    3px 3px 4px rgba(0,0,0,.8);*/
+    
+  }
+  .inputCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .inputWrap{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:60px;
+    width: 90%;
+    background-color: darkcyan;
+    border-radius:5px;
+
+  }
+  .inputWrap > input.inputList {
+    padding:7px;
+    height: 39px;
+    width:190px;
+    background-color: black;
+    color:white;
+    border-radius:7px 0px 0px 7px;
+    font-size: 17px;
+    font-weight: bolder;
+    outline:none;
+    border:none;
+    border-right: 4px solid darkcyan;
+  }
+  .inputWrap > button.addList {
+    padding: 5px;
+    height: 39px;
+    width: 80px;
+    background-color: black;
+    color: white;
+    border-radius: 0px 7px 7px 0px;
+    font-size: 17px;
+    font-weight: bolder;
+    outline: none;
+    border:none;
+  }
+  .viewListBgCont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  }
+  .suggestion{
+    margin-top: 2.5vh;
+    height:30px;
+    width:250px;
+    background-color: darkcyan;
+    border-radius:7px 7px 0px 0px;
+  }
+  .suggestionText{
+    color: white;
+    text-align: center;
+    font-size:16px;
+    font-weight: bolder;
+    padding:3px;
+  }
+  .viewListSmCont{
+    padding:5px;
+    height:370px;
+    width:285px;
+    background-color: darkcyan;
+    border-radius: 7px;
+    color:white;
+    overflow-y: scroll;
+    counter-reset: my-sec-counter;
+  }
+  .viewUserText{
+    padding: 5px;
+    font-size:14px;
+    color: white;
+    text-indent: 2px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    
+  }
+  .delete{
+    font-size:1rem;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    transition: all 0.2s;
+  }
+  .delete:hover{
+    color: #000;
+  }
+  .viewUserText::before{
+    counter-increment: my-sec-counter;
+    content:counter(my-sec-counter) '.';
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
