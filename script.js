@@ -9,10 +9,16 @@ addUserList.addEventListener('click',() => {
   createUserElementList();
   clearUserInputText();
 }); 
-
+document.addEventListener('keydown',(e)=>{
+  if(e.key === "Enter"){
+    createUserElementList();
+    clearUserInputText();
+  }
+  else{
+       console.log(" ")
+  }
+});
 function createUserElementList(){
-  let recentDelete = [];
-  let i = 0;
   const createElement = document.createElement('p');
 
   const deleteList = document.createElement('i');
@@ -28,10 +34,11 @@ function createUserElementList(){
   createElement.classList.add('viewUserText');
   createElement.appendChild(deleteList);
   
-  viewUserListCont.appendChild(createElement)
+  viewUserListCont.appendChild(createElement);
+  addList.push(viewUserListCont);
   
 }
 
 function clearUserInputText(){
-  userInputList.value = ' ';
+  userInputList.value = '';
 }
